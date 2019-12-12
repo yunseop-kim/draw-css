@@ -12,28 +12,36 @@
     .circle {
       width: 20px;
       height: 20px;
-      background-color: white;
+      background-color: rgb(107, 171, 163);
       border-radius: 20px;
-      border: 5px solid black;
+      border: 1px solid rgb(107, 171, 163);
       margin: auto;
     }
 
     .header {
+      background-color: rgb(107, 171, 163);
       text-align: center;
-      margin: 35px 20px;
+      padding: 30px;
     }
 
     .header .title {
       text-transform: uppercase;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid rgb(196, 221, 219);
       font-weight: 500;
       font-size: 50px;
+      color: rgb(34, 44, 63);
       margin-bottom: 0px;
     }
 
     .header .subtitle {
       margin-top: 5px;
       font-weight: 400;
+      color: rgb(34, 44, 63);
+    }
+
+    .history {
+      background-color: rgb(33, 43, 62);
+      padding: 10px;
     }
 
     .item {
@@ -41,7 +49,7 @@
       text-align: right;
       position: relative;
       padding: 10px;
-      border-right: 4px solid black;
+      border-right: 4px solid rgb(107, 171, 163);
       margin-left: -22px;
     }
 
@@ -49,22 +57,32 @@
       text-align: left;
       margin-left: auto;
       border-right: 0;
-      border-left: 4px solid black;
+      border-left: 4px solid rgb(107, 171, 163);
       margin-right: -22px;
     }
 
     .item .logo {
       display: inline-block;
       vertical-align: top;
+      width: 60px;
+      height: 60px;
       margin: 15px;
+      padding: 5px;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .item .logo img {
+      margin: 5px;
     }
 
     .item .logo .line {
-      background-color: black;
+      background-color: rgb(107, 171, 163);
       height: 4px;
       width: 25px;
       position: absolute;
-      top: 48px;
+      top: 54px;
       right: 0;
     }
 
@@ -79,32 +97,35 @@
 
     .item .contents .year {
       font-size: 35px;
+      color: rgb(226, 87, 68);
       font-weight: bolder;
-      margin: 0;
+      margin: -10px 0;
     }
 
     .item .contents .title {
       font-size: 20px;
+      color: rgb(104, 167, 160);
       font-weight: bold;
       margin: 0;
     }
 
     .item .contents .description {
       margin: 0;
+      color: whitesmoke;
     }
   </style>
 
 <body>
   <header class="header">
     <h1 class="title">timeline</h1>
-    <h4 class="subtitle">History of Popular Social Media Platforms</h4>
+    <div class="subtitle">History of Popular Social Media Platforms</div>
   </header>
   <div class="history">
     <div class="circle"></div>
     <div class="item">
       <div class="contents">
-        <h3 class="year">2002</h3>
-        <h5 class="title">LinkedIn</h5>
+        <div class="year">2002</div>
+        <div class="title">LinkedIn</div>
         <p class="description">
           A Business and employment-oriented social networking service that operates via websites and mobile apps
         </p>
@@ -123,8 +144,8 @@
           width="50" height="50">
       </div>
       <div class="contents">
-        <h3 class="year">2004</h3>
-        <h5 class="title">Facebook</h5>
+        <div class="year">2004</div>
+        <div class="title">Facebook</div>
         <p class="description">
           An online social media and social networking service based in Menlo Park, California.
         </p>
@@ -132,8 +153,8 @@
     </div>
     <div class="item">
       <div class="contents">
-        <h3 class="year">2005</h3>
-        <h5 class="title">Youtube</h5>
+        <div class="year">2005</div>
+        <div class="title">Youtube</div>
         <p class="description">
           First large-scale video sharing website that makes it easy to watch videos online
         </p>
