@@ -42,30 +42,40 @@
     .history {
       background-color: rgb(33, 43, 62);
       padding: 10px;
+      position: relative;
+    }
+
+    .history:before {
+      content: ' ';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      background-color: rgb(107, 171, 163);
+      width: 4px;
+      margin-left: -2px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     .item {
       width: 50%;
+      padding: 10px;
       text-align: right;
       position: relative;
-      padding: 10px;
-      border-right: 4px solid rgb(107, 171, 163);
-      margin-left: -22px;
+      box-sizing: border-box;
     }
 
     .item.right {
       text-align: left;
       margin-left: auto;
-      border-right: 0;
-      border-left: 4px solid rgb(107, 171, 163);
-      margin-right: -22px;
+      margin-top: -50px;
+      margin-bottom: -50px;
     }
 
     .item .logo {
       display: inline-block;
       vertical-align: top;
-      width: 60px;
-      height: 60px;
       margin: 15px;
       padding: 5px;
       background-color: white;
@@ -74,10 +84,11 @@
     }
 
     .item .logo img {
-      margin: 5px;
+      vertical-align: top;
     }
 
-    .item .logo .line {
+    .item .logo:after {
+      content: ' ';
       background-color: rgb(107, 171, 163);
       height: 4px;
       width: 25px;
@@ -86,7 +97,7 @@
       right: 0;
     }
 
-    .item.right .logo .line {
+    .item.right .logo:after {
       left: 0;
     }
 
@@ -114,11 +125,12 @@
       color: whitesmoke;
     }
   </style>
+</head>
 
 <body>
   <header class="header">
     <h1 class="title">timeline</h1>
-    <div class="subtitle">History of Popular Social Media Platforms</div>
+    <p class="subtitle">History of Popular Social Media Platforms</p>
   </header>
   <div class="history">
     <div class="circle"></div>
@@ -131,7 +143,6 @@
         </p>
       </div>
       <div class="logo">
-        <div class="line"></div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
           alt="linkedin" width="50" height="50">
@@ -139,7 +150,6 @@
     </div>
     <div class="item right">
       <div class="logo">
-        <div class="line"></div>
         <img src="https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" alt="facebook"
           width="50" height="50">
       </div>
@@ -160,7 +170,6 @@
         </p>
       </div>
       <div class="logo">
-        <div class="line"></div>
         <img src="https://www.freepnglogos.com/uploads/youtube-icon-png-12.png" alt="youtube" width="50" height="50">
       </div>
     </div>
