@@ -64,9 +64,10 @@
       text-align: right;
       position: relative;
       box-sizing: border-box;
+      overflow: hidden;
     }
 
-    .item.right {
+    .item_right {
       text-align: left;
       margin-left: auto;
       margin-top: -50px;
@@ -74,13 +75,13 @@
     }
 
     .item .logo {
-      display: inline-block;
       vertical-align: top;
       margin: 15px;
       padding: 5px;
       background-color: white;
       border-radius: 10px;
       text-align: center;
+      float: right;
     }
 
     .item .logo img {
@@ -97,13 +98,16 @@
       right: 0;
     }
 
-    .item.right .logo:after {
+    .item_right .logo:after {
       left: 0;
     }
 
+    .item_right .logo {
+      float: left;
+    }
+
     .item .contents {
-      display: inline-block;
-      width: 50%;
+      overflow: hidden;
     }
 
     .item .contents .year {
@@ -111,6 +115,7 @@
       color: rgb(226, 87, 68);
       font-weight: bolder;
       margin: -10px 0;
+      padding-top: 10px;
     }
 
     .item .contents .title {
@@ -122,10 +127,32 @@
 
     .item .contents .description {
       margin: 0;
+      max-width: 300px;
+      display: inline-block;
       color: whitesmoke;
     }
+
+    @media (max-width: 720px) {
+      .history:before {
+        display: none;
+      }
+
+      .item {
+        width: auto;
+        text-align: center;
+        margin: 0;
+      }
+
+      .item .logo {
+        float: none;
+        display: inline-block;
+      }
+
+      .item .logo:after {
+        display: none;
+      }
+    }
   </style>
-</head>
 
 <body>
   <header class="header">
@@ -135,6 +162,11 @@
   <div class="history">
     <div class="circle"></div>
     <div class="item">
+      <div class="logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
+          alt="linkedin" width="50" height="50">
+      </div>
       <div class="contents">
         <div class="year">2002</div>
         <div class="title">LinkedIn</div>
@@ -142,13 +174,8 @@
           A Business and employment-oriented social networking service that operates via websites and mobile apps
         </p>
       </div>
-      <div class="logo">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png"
-          alt="linkedin" width="50" height="50">
-      </div>
     </div>
-    <div class="item right">
+    <div class="item item_right">
       <div class="logo">
         <img src="https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" alt="facebook"
           width="50" height="50">
@@ -162,15 +189,15 @@
       </div>
     </div>
     <div class="item">
+      <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/youtube-icon-png-12.png" alt="youtube" width="50" height="50">
+      </div>
       <div class="contents">
         <div class="year">2005</div>
         <div class="title">Youtube</div>
         <p class="description">
           First large-scale video sharing website that makes it easy to watch videos online
         </p>
-      </div>
-      <div class="logo">
-        <img src="https://www.freepnglogos.com/uploads/youtube-icon-png-12.png" alt="youtube" width="50" height="50">
       </div>
     </div>
     <div class="circle"></div>
